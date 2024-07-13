@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>数値計算</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <h1>二分法とニュートン法の計算とグラフ</h1>
+
+    <div>
+    <br>
+        <input type="text" id="a" value="1">x<sup>3</sup> + <input type="text" id="b" value="0">x<sup>2</sup>  + <input type="text" id="c" value="1">x + <input type="text" id="d" value="-1"><br>
+        <button onclick="setGraph()">グラフ描画</button>
+        <br>
+        <button onclick="calc_nibun()">二分法で計算</button>
+        <button onclick="calc_newton()">ニュートン法で計算</button><br>
+        <br>
+        許容誤差：<input type="text" id="eps" value="0.01"><br>
+        初期値a：<input type="text" id="ai" value="0">
+        初期値b：<input type="text" id="bi" value="2"><br>
+        初期値：<input type="text" id="an" value="3"><br>
+    </div>
+
+    <hr>
+    <br>
+
+    <div>
+        <div id="title"></div>
+        <canvas id="graphCanvas" width="600" height="400" style="border:1px solid #000000;"></canvas><br>
+        <button id="drawNibun" onclick="nibun_main()" style="visibility: hidden;">次へ</button>
+        <button id="drawNewton" onclick="newton_main()" style="visibility: hidden;">次へ</button>
+        <div id="answer"></div>
+    </div>
+    
+    <script src="canvas.js"></script>
+    <script src="script.js"></script>
+    <script src="nibun.js"></script>
+    <script src="newton.js"></script>
+</body>
+</html>
